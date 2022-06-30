@@ -1,0 +1,88 @@
+
+<ion-content color="primary" [fullscreen]="true" >
+
+  <div style=" height: 5%;">
+    <div class="back" routerLink="/ingreso"><ion-icon name="chevron-back-outline"></ion-icon></div>
+  </div>
+
+  <!--
+AGREGAR A FAVORITOS EN LOCAL STORAGE
+  -->
+  <div class="fav" (click)="addFav()">Agregar a favoritos</div>
+
+
+  <div class="imgcontain">
+    <img src="{{img}}"/>
+    <div class="texto-encima">
+      <p class="title" style="background-color: rgba(0, 0, 0, 0.372); border-radius: 10px;">{{nombre}}</p>
+    </div>
+  </div>
+
+  <section>
+
+<p class="title2">Acerca de</p>
+<p class="description">{{descripcion}}</p>
+
+<section style="height: 40%; padding-top: 3%; padding-bottom: 5%;">
+  <p class="title2">Ubicacion</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24434.11068556416!2d-70.09353273061816!3d-40.04721272956473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960e36331553e3e3%3A0xf05f71215d59d86d!2sPiedra%20del%20Aguila%2C%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1656188785698!5m2!1ses-419!2sar" width="100%" height="100%" style="border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+  <ion-button color="secondary" style="float: right;" href="https://www.google.com/maps/dir//Piedra+del+Aguila,+Neuqu%C3%A9n/@-40.047247,-70.076023,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x960e36331553e3e3:0xf05f71215d59d86d!2m2!1d-70.0754465!2d-40.0482871?hl=es-419">Visitar</ion-button>
+</section>
+
+<div class="parent">
+
+  <div class="div1">
+    <div class="iconscontain">
+      <ion-icon name="thumbs-up-outline" (click)="megusta()"></ion-icon><p class="nameicon">{{good}}</p>
+  </div>
+  </div>
+
+<div class="div2"> 
+    <div class="iconscontain">
+      <ion-icon name="thumbs-down-outline" (click)="nomegusta()"></ion-icon><p class="nameicon">{{bad}} </p>
+    </div>
+
+</div>
+
+
+
+
+</div>
+</section>
+
+<section>
+  <p class="title2">Comentarios</p>
+
+  <ion-item color="primary" *ngFor="let coments of comentarios">
+    <ion-avatar slot="start">
+      <img src="\assets\img\user.png" />
+    </ion-avatar>
+    <ion-label>
+      <h2>{{coments.nombre}}</h2>
+      <p>{{coments.comentario}}</p>
+    </ion-label>
+  </ion-item>
+  
+
+<form id="myform" [formGroup]="formCreate" (ngSubmit)='formcoment();'>
+<p style="text-align: center;">Agrega un comentario</p>
+<ion-label>Nombre</ion-label>
+<ion-input placeholder="Ingrese su nombre" formControlName="nombrecoment"></ion-input>
+<ion-label position="stacked">Comentario</ion-label>
+<ion-textarea placeholder="Escribe el comentario" formControlName="comentario"></ion-textarea>
+<ion-button type="submit" color="secondary" style="display: block;">Enviar comentario</ion-button>
+
+
+  
+</form>
+
+
+
+  </section>
+
+
+  
+
+  
+
+</ion-content>

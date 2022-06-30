@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content color="primary" [fullscreen]="true">
+
+  <div style=" height: 18%;">
+    <div class="back" routerLink="/ingreso"><ion-icon name="chevron-back-outline"></ion-icon></div>
+    <p class="titleprincipal">Tus lugares favoritos</p>
+  
+  </div>
+
+ <!--
+template que se muestra si no hay lugares en favoritos
+  --> 
+  <ng-template [ngIf]="active == false">
+    <form>
+      <ion-input placeholder="Buscar"></ion-input>
+    </form>
+    <div class="parent">
+      <div class="div1" *ngFor="let item of data ">
+        <ion-card class="card"> 
+          <img src="\assets\img\pic.jpg"/>
+          <div class="texto-encima">
+            <p class="title">{{item.name}}</p>
+          </div>
+        </ion-card>
+      </div>
+
+    </div>
+
+  </ng-template>
+
+    <ng-template [ngIf]="active == true">
+      <form>
+        <ion-input placeholder="Buscar"></ion-input>
+      </form>
+      <div class="nothing">
+        <p>Todavia no guardaste ningun lugar <br>Comienza a explorar!</p>
+    </div>
+    </ng-template>
+
+
+</ion-content>

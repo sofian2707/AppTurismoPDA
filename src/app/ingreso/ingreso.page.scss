@@ -1,0 +1,194 @@
+*{
+    white-space: none;
+    
+}
+
+ /*ENCABEZADO */ 
+
+header{
+    height: 20%; 
+    margin-top: 12%;
+   
+}
+
+ion-input{
+height: 55px;
+width: 330px;
+background-color: #263238;
+margin-top: 33px;
+margin-left: auto;
+margin-right: auto;
+border-radius: 12px;
+color: #A5A5A5;
+font-family: 'Poppins';
+font-size: 19px;
+text-align: start;
+
+}
+
+.text, .lugar{
+font-family: 'Montserrat', sans-serif;
+color: #FFFFFF;
+font-size:  1.5em;
+margin-left: 2%;
+}
+
+.lugar{
+    line-height: 1%;
+}
+
+.text{
+    font-weight: 100;
+    margin-top: 5%;
+}
+
+.user{
+    float:right;
+}
+
+
+
+
+/* BARRA DE BOTONES   */ 
+
+ion-button{
+    font-weight: 700px;
+    --color:white;
+    --border-radius:  8px;
+    display: inline-block;
+    --background: #263238;
+}
+
+.btn{
+ display: inline-block;
+ overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 8%;
+  width: 100%;
+}
+
+.change{
+    --background: #5EDFFF;
+    --color: black;
+    font-weight: 700px;
+    
+}
+
+
+
+/* GALERIA CARDS  */ 
+.card{
+    max-width: 100%;
+    height: 25vh;
+    box-shadow: none;
+    border-radius:12px;
+    box-sizing: border-box; 
+}
+
+img{
+    object-fit:cover;
+    width:100%;
+    height: 100%;
+    transform:scale(1.1,1.1)rotate(1deg);
+    transition:600ms all ease-in-out;
+}
+
+.swiper-slide-active{
+    transform:scale(1.05,1.05);
+    .card{
+        img{
+            transform:scale(1,1);
+        }
+}
+}
+                                    I
+.swiper-slide{
+    transition:400ms all ease-in-out;
+}
+
+.texto-encima{
+    position: absolute;
+    top: 70%;
+    left: 4%;
+    word-break:break-all;
+    
+}
+
+.title{
+    color: white;
+font-family: 'Poppins';
+font-style: normal;
+font-size: 17px;
+
+}
+
+.cardscontain{
+    flex-wrap: wrap;
+
+}
+
+
+
+/* Mas cercano a ti   */ 
+
+.title2{
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 350;
+    
+    }
+    
+.ultimo{
+        margin-top: 5%;
+    }
+
+.imgclose{
+    
+    height: 150px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* RESPONSIVE medidas  */ 
+
+
+@media (max-width: 340px) {
+    ion-input{
+        height: 50px;
+        width: 260px;
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    header{
+        height: 23%;
+    } 
+    .title{
+        font-size: 14px;
+    }
+
+}
+
+
+@media (min-width: 360px) {
+    header{
+        height: 23%;
+    } 
+    .title{
+        font-size: 14px;
+    }
+
+}
+
+
+@media (max-width: 376px) {
+    header{
+        height: 23%;
+    } 
+}
+

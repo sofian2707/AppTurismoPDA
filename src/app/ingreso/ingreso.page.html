@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content color="primary" [fullscreen]="true">
+
+  <header>
+    <div style="height: 35%; margin: 0px auto;">
+      <div class="user">
+        <ion-icon name="person-circle-outline" style=" height: 50px; width: 50px;" routerLink="/favplaces"></ion-icon>
+      </div>
+      <p class="text">Explora</p>
+      <p class="lugar">Piedra del Aguila</p>
+    </div>
+    <form>
+      <ion-input placeholder="Encuentra lugares para visitar" (ionChange)="searchplace($event)"></ion-input>
+    </form>
+  </header>
+
+  <section>
+    <div class="btn"> 
+      <ion-button (click)="verTodo()" [ngClass]="filter == 'todos' ? 'change' : 'disable'">Todos</ion-button> 
+      <ion-button (click)="verLagos()" [ngClass]="filter == 'lagos' ? 'change' : 'disable'">Lagos</ion-button> 
+      <ion-button (click)="verRios()" [ngClass]="filter == 'rios' ? 'change' : 'disable'">Rios</ion-button> 
+      <ion-button (click)="verBares()" [ngClass]="filter == 'bares' ? 'change' : 'disable'">Bares</ion-button> 
+      <ion-button (click)="verHoteles()" [ngClass]="filter == 'hoteles' ? 'change' : 'disable'">Hoteles</ion-button> 
+      <ion-button (click)="verCamping()" [ngClass]="filter == 'camping' ? 'change' : 'disable'">Camping</ion-button> 
+      <ion-button (click)="verRestaurant()" [ngClass]="filter == 'restaurant' ? 'change' : 'disable'">Restaurantes</ion-button> 
+      <ion-button (click)="verMiradores()" [ngClass]="filter == 'miradores' ? 'change' : 'disable'">Miradores</ion-button> 
+    </div>
+  </section>
+
+  <section>
+
+    <div>
+      <div class="cardscontain">
+        <ion-slides [options]="option">
+          <ion-slide *ngFor="let slide of todos">
+          <ion-card class="card" (click)="slideClick(slide.id)"> 
+            <img src="{{slide.img}}"/>
+            <div class="texto-encima">
+              <p class="title">{{slide.nombre}}</p>
+            </div>
+          </ion-card>
+          </ion-slide>
+        </ion-slides>
+        </div>
+      </div>
+
+
+  </section>
+
+  <section>
+
+    <div class="ultimo">
+      <p class="title2">Mas popular</p>
+      <ion-card class="imgclose"> 
+        <img src="./assets/img/place1.jpg"/>
+        <div class="texto-encima">
+          <p class="title">Rio limay</p>
+        </div>
+      </ion-card>
+    </div>
+
+  </section>
+
+</ion-content>

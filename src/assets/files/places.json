@@ -1,0 +1,236 @@
+{
+   
+    "todos":[
+        {
+            "img": "https://i.postimg.cc/Lssk6hxC/10862643-839473892777790-1913677112384890611-o.jpg",
+            "nombre": "Rio Limay",
+            "distancia": "23.9 Km",
+            "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7099.479677065168!2d-70.0275992539483!3d-40.05240726516139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960e49b8fd6a72cf%3A0x660034b9fad0df15!2sCamping%20Piedra%20del%20%C3%81guila!5e0!3m2!1ses-419!2sar!4v1655761200815!5m2!1ses-419!2sar",
+            "descripcion": "Se trata del tramo del río Limay que sale del dique, caracterizado por sus aguas claras con muchos rápidos, corredores y posones aptos para la pesca con mosca y spinning liviano. Cientos de pescadores se acercan cada año para disfrutar de este deporte que les permite obtener ejemplares de truchas marrones de hasta 5 kilos y truchas arco iris de hasta 3 kilos",
+            "good": 99,
+            "bad": 6,
+            "id": "1",
+            "comments": [],
+            "type":"rios"
+           },
+           {
+            "img": "https://i.postimg.cc/ydYGKVRs/place3.jpg",
+            "nombre": "Rio Pichi Picun Leufu",
+            "distancia": "21.8 Km",
+            "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17750.06476037126!2d-70.002067516396!3d-40.014169354315804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960e49586bbd9077%3A0xe4d2a748ef466dee!2sEmbalse%20Pichi%20Picun%20Leufu!5e0!3m2!1ses-419!2sar!4v1655760804291!5m2!1ses-419!2sar",
+            "descripcion": "Emplazado sobre el río Limay, límite natural entre las provincias de Neuquén y Río Negro, el Dique Pichi Picún Leufú conforma una de las más impresionantes obras hidroeléctricas de la región. Aguas abajo, la actividad privilegiada la pesca deportiva de codiciadas especies, sumándosele el disfrute de las aguas mediante actividades recreativas, y hasta el simple paseo por las costas.",
+            "good": 94,
+            "bad": 80,
+            "comments": [],
+            "id": "2",
+            "type":"rios"
+           },
+           {
+            "img": "https://i.postimg.cc/HsDkpK6F/place2.jpg",
+            "nombre": "Balneario Kumelkayen",
+            "distancia": "5 Km",
+            "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7099.479677065168!2d-70.0275992539483!3d-40.05240726516139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960e49b8fd6a72cf%3A0x660034b9fad0df15!2sCamping%20Piedra%20del%20%C3%81guila!5e0!3m2!1ses-419!2sar!4v1655761200815!5m2!1ses-419!2sar",
+            "descripcion": "Una costanera de aguas cristalinas con más de 250 metros de iluminación y parquizado. Un lugar ideal para el descanso y el relax. El balneario cuenta con variados servicios como baños con duchas públicas, una confitería, Oficina de informes turísticos, un camping con parrillas, estacionamiento y guardería de lanchas.",
+            "good": 55,
+            "bad": 64,
+            "comments": [],
+            "id": "3",
+            "type":"lagos"
+           },
+           {
+            "img": "https://i.postimg.cc/1XRvynty/dein-haus.jpg",
+            "nombre": "Dein Haus",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "De estilo casual y acogedor, Dein Haus es un pub y restaurante que sorprende con su interesante menú y su variedad de cervezas. Abierto desde la mañana hasta avanzada la noche, el local ofrece desde gustosos desayunos americanos hasta amenos after-work al anochecer",
+            "good": 49,
+            "bad": 21,
+            "comments": [],
+            "id": "4",
+            "type":"bares"
+           },
+           {
+            "img": "https://i.postimg.cc/7Yc4y84c/2020-09-21.jpg",
+            "nombre": "El Galpon",
+            "distancia": "2 Km",
+            "maps": "maps 2",
+            "descripcion": "Este es un bar de ambiente muy jovial, caracterizado por la coctelería de autor y vanguardia, ofrece coctéles clásicos, cervezas nacionales e importadas, vinos y whiskies de etiqueta. Tapas y platos para compartir que acompañan muy bien a la extensa carta de coctelería.",
+            "good": 69,
+            "bad": 49,
+            "comments": [],
+            "id": "5",
+            "type":"bares"
+           },
+           {
+            "img": "https://i.postimg.cc/CLptChFw/cerveza-artesanal-gorgo.jpg",
+            "nombre": "Gorgo Cerveceria",
+            "distancia": "1 Km",
+            "maps": "maps 3",
+            "descripcion": "En un ambiente cálido y tradicional, esta cervecería artesanal cuenta con un delicioso menú de picadas y chops",
+            "good": 4,
+            "bad": 80,
+            "comments": [],
+            "id": "6",
+            "type":"bares"
+           },
+           {
+            "img": "https://i.postimg.cc/tgfypKF7/10810914843-50580ef416-b.jpg",
+            "nombre": "El Ciervo",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "Todo el mundo necesita un sitio donde reposar cuando está cansado. Para aquellos que visiten Piedra del aguila, El ciervo es una magnífica elección para descansar. Conocido por su proximidad a fantásticos restaurantes y atracciones, El ciervo te ayuda a disfrutar de lo mejor de Piedra del aguila.",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "7",
+            "type":"hoteles"
+           },
+           {
+            "img": "https://i.postimg.cc/QMq5zq76/cuyen-nuque.jpg",
+            "nombre": "Cuyén Ñuque",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "Recepción abierta 24 horas, servicio de habitaciones y conserje son algunos de los servicios que ofrece el hotel. Su piscina y desayuno incluido también contribuirán a que tu estancia sea incluso más especial.",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "8",
+            "type":"hoteles"
+
+           },
+           {
+            "img": "https://i.postimg.cc/QMV96rXM/2022-02-02.jpg",
+            "nombre": "Hotel Rasur",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "Hotel Rasur es una magnífica elección para viajeros que vayan a Piedra del Aguila, ya que ofrece un ambiente para familias además de numerosos servicios diseñados para mejorar su estancia.",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "9",
+            "type":"hoteles"
+           },
+           {
+            "img": "https://i.postimg.cc/2yxSkHzJ/10987382-778659558877396-3795364164544972160-n.jpg",
+            "nombre": "Hostería Ruca Rayén",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "El hotel pequeño tiene recepción abierta 24 horas, servicio de habitaciones y conserje. Además, los huéspedes pueden disfrutar de desayuno incluido, lo que lo ha convertido en una opción popular entre los viajeros que visitan Piedra del Aguila",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "10",
+            "type":"hoteles"
+           },
+           {
+            "img": "https://i.postimg.cc/TP30cBsD/camping.png",
+            "nombre": "Camping Perilago",
+            "distancia": "5 Km",
+            "maps": "maps 1",
+            "descripcion": "El Camping se encuentra en el Lago Kumelkayen y alberga un jardín. Este tented camp ofrece aparcamiento privado gratuito y se encuentra en una zona ideal para practicar senderismo, ciclismo y pesca.",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "11",
+            "type":"hoteles"
+           },
+           {
+            "img": "https://i.postimg.cc/rsbMF7Bf/r747-Restaurant-Aleman-exterior.jpg",
+            "nombre": "Aleman",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "Servir una magnífica pizza, unas fascinantes milanesas y un sabroso juane es la seña de identidad de este restaurante. Su buen cordial recibe comentarios positivos. Es fácil encontrar al Aleman gracias a su estupenda ubicación",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "12",
+            "type":"restaurant"
+           },
+           {
+            "img": "https://i.postimg.cc/X7RnMScJ/2020-02-17.jpg",
+            "nombre": "Las Brasas",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "invita a dejarse llevar por los sabores regionales, apostando por productos típicos de la zona preparados de forma innovadora para cada cena. El menú es variante y consiste en una divertida degustación de siete platos con las delicias más representativas de Argentina.",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "13",
+            "type":"restaurant"
+           },
+           {
+            "img": "https://i.postimg.cc/cHkNXVLd/108-500161446.jpg",
+            "nombre": "Mishquihue",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "En el corazón del museo, el restaurante ofrece comida porteña con especialidad en crepes, pastas caseras y clásicos regionales. En un ambiente clásico y acogedor, en el patio lleno de plantas, se puede disfrutar de un buen desayuno, un almuerzo ejecutivo o tomar el té con sabrosas tortas caseras",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "14",
+            "type":"restaurant"
+           },
+           {
+            "img": "https://i.postimg.cc/3NDJpKCs/D-piedra-aguila-neuquen.jpg",
+            "nombre": "Mirador el Aguila",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "Al cumplirse los 100 años de la localidad en abril de 1997 se inauguró un monumento simbólico sobre el Águila Mora. El escultor de la obra fue Osvaldo Parra Valenzuela y fue construida gracias a los aportes del gobierno de Neuquén y declarada de Interés Provincial.",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "15",
+            "type":"mirador"
+           },
+           {
+            "img": "https://i.postimg.cc/HsRXfxhy/pda2.jpg",
+            "nombre": "Mirador Hidroelectrica",
+            "distancia": "19 Km",
+            "maps": "maps 1",
+            "descripcion": "Prometedor cerro desde el cual puede captarse una panorámica completa de los atractivos centrales de la Hidroelectrica y el Rio limay ",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "16",
+            "type":"mirador"
+           },
+           {
+            "img": "https://i.postimg.cc/FFPjVGbG/155563164-4019873954737752-271512618343941177-n.jpg",
+            "nombre": "Paseo Piedra del Aguila",
+            "distancia": "Entrada",
+            "maps": "maps 1",
+            "descripcion": "Recorrido familiar para descansar, tomar aire y seguir camino, con esculturas de metal",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "17",
+            "type":"mirador"
+           },
+           {
+            "img": "https://i.postimg.cc/LXP8g9Vr/Monumento-al-Pescador-Google-Maps.png",
+            "nombre": "Monumento al Pescador",
+            "distancia": "Plaza Centro",
+            "maps": "maps 1",
+            "descripcion": "Siendo la pesca deportiva una de las rincipales actividades en esta ciudad de la Patagonia, se realizó una obra de escultura que rinde homenaje a dicha actividad. El objetivo principal fue poder reflejar la mayor riqueza turística de la localidad de Piedra del Águila, potenciando así el producto de pesca durante todo el año.",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "18",
+            "type":"mirador"
+           },
+           {
+            "img": "https://i.postimg.cc/sghZ7zsX/11200951-932627436795768-1660600321953807808-o.jpg",
+            "nombre": "Museo",
+            "distancia": "Centro",
+            "maps": "maps 1",
+            "descripcion": "Esta institución fue fundada en 1995 con el objetivo de exhibir el patrimonio paleontológico que había sido hallado durante la construcción de la represa de Piedra del Águila.",
+            "good": 45,
+            "bad": 48,
+            "comments": [],
+            "id": "19",
+            "type":"todos"
+           }
+
+    ]
+
+}
