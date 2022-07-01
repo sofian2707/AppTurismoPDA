@@ -51,7 +51,6 @@ export class SeePlacePage implements OnInit {
       this.descripcion= this.todos[this.finalId].descripcion;
       this.good= this.todos[this.finalId].good;
       this.bad= this.todos[this.finalId].bad;
-      this.comentarios= this.todos[this.finalId].comentarios;
       this.data= this.todos[this.finalId];
       console.log("Elemento recuperado:",this.data)
     })

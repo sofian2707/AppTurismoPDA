@@ -18,10 +18,11 @@ template que se muestra si no hay lugares en favoritos
     </form>
     <div class="parent">
       <div class="div1" *ngFor="let item of data ">
-        <ion-card class="card"> 
-          <img src="\assets\img\pic.jpg"/>
+        <ion-card class="card" (click)="slideClick(item.id)"> 
+          <img src="{{item.img}}"/>
           <div class="texto-encima">
-            <p class="title">{{item.name}}</p>
+            <p class="title">{{item.nombre}}</p>
+            <p class="delete">- Eliminar de favoritos</p>
           </div>
         </ion-card>
       </div>

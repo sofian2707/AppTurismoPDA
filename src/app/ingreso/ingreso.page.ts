@@ -48,44 +48,63 @@ searchedPlace: any;
     this.filter = "todos";
     this.service.getTodos().subscribe(res=>{
       this.todos= res;
-      this.searchedPlace = this.todos;
     })
+
   }
 
   verLagos() {
     this.filter = "lagos"
     this.service.getTodos().subscribe(res=>{
       this.todos= res.filter((x: { type: string; })=>x.type==this.filter);
+      
     })
     
   }
 
   verRios() {
     this.filter = "rios";
+    this.service.getTodos().subscribe(res=>{
+      this.todos= res.filter((x: { type: string; })=>x.type==this.filter);
+    })
    
   }
 
   verBares() {
     this.filter = "bares";
+    this.service.getTodos().subscribe(res=>{
+      this.todos= res.filter((x: { type: string; })=>x.type==this.filter);
+    })
    
   }
   verHoteles() {
     this.filter = "hoteles";
+    this.service.getTodos().subscribe(res=>{
+      this.todos= res.filter((x: { type: string; })=>x.type==this.filter);
+    })
    
   }
 
   verCamping() {
     this.filter = "camping";
+    this.service.getTodos().subscribe(res=>{
+      this.todos= res.filter((x: { type: string; })=>x.type==this.filter);
+    })
    
   }
 
   verRestaurant() {
     this.filter = "restaurant";
+    this.service.getTodos().subscribe(res=>{
+      this.todos= res.filter((x: { type: string; })=>x.type==this.filter);
+    })
     
     
   }
   verMiradores() {
     this.filter = "miradores";
+    this.service.getTodos().subscribe(res=>{
+      this.todos= res.filter((x: { type: string; })=>x.type==this.filter);
+    })
    
   }
 
@@ -96,7 +115,7 @@ searchedPlace: any;
 
     if(this.filter="todos"){
     if(text && text.trim() != ''){
-      this.searchedPlace = this.searchedPlace.filter((todos: any)=>{
+      this.todos = this.todos.filter((todos: any)=>{
         return(todos.nombre.toLowerCase().indexOf(text.toLowerCase()) > 1)
       })}
 

@@ -20,7 +20,7 @@ margin-left: auto;
 margin-right: auto;
 border-radius: 12px;
 color: #A5A5A5;
-font-family: 'Poppins';
+font-family: 'Montserrat', sans-serif;
 font-size: 19px;
 text-align: start;
 
@@ -29,7 +29,7 @@ text-align: start;
 .text, .lugar{
 font-family: 'Montserrat', sans-serif;
 color: #FFFFFF;
-font-size:  1.5em;
+font-size:  1.8em;
 margin-left: 2%;
 }
 
@@ -57,6 +57,7 @@ ion-button{
     --border-radius:  8px;
     display: inline-block;
     --background: #263238;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .btn{
@@ -66,6 +67,7 @@ ion-button{
   white-space: nowrap;
   height: 8%;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .change{
@@ -118,8 +120,10 @@ img{
 .title{
     color: white;
 font-family: 'Poppins';
-font-style: normal;
+font-weight: bolder;
 font-size: 17px;
+background-color: rgba(0, 0, 0, 0.215);
+border-radius: 10px;
 
 }
 

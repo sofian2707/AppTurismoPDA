@@ -24,12 +24,13 @@ ion-icon{
 }
 
 .titleprincipal{
-font-family: 'Poppins';
+font-family: 'Montserrat', sans-serif;
 font-style: normal;
 font-weight: 500;
 font-size: 2em;
 line-height: 27px;
 color: #FFFFFF;
+
 }
 
 .nothing{
@@ -44,7 +45,7 @@ color: #FFFFFF;
     align-items: center;
      
      p{
-        font-family: 'Roboto';
+        font-family: 'Montserrat', sans-serif;
         font-style: normal;
         font-weight: 400;
         font-size: 17px;
@@ -61,7 +62,7 @@ ion-input{
     background-color: #263238;
     border-radius: 12px;
     color: #A5A5A5;
-    font-family: 'Poppins';
+    font-family: 'Montserrat', sans-serif;
     font-size: 19px;
     margin-left: 5%;
 
@@ -107,19 +108,31 @@ ion-input{
 
     .texto-encima{
     position: absolute;
-    top: 70%;
-    left: 4%;
+    top: 60%;
+    left: 2%;
     word-break:break-all;
+    background-color: rgba(0, 0, 0, 0.215);
+border-radius: 10px;
+width: 100%;
     
 }
 
 .title{
-    color: white;
-font-family: 'Poppins';
+color: white;
+font-family: 'Montserrat', sans-serif;
 font-style: normal;
 font-size: 17px;
 
 }
+
+.delete{
+    width: fit-content;
+    color: #5EDFFF;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
 
 
 

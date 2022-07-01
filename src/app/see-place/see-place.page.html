@@ -45,8 +45,6 @@ AGREGAR A FAVORITOS EN LOCAL STORAGE
 </div>
 
 
-
-
 </div>
 </section>
 
@@ -58,14 +56,14 @@ AGREGAR A FAVORITOS EN LOCAL STORAGE
       <img src="\assets\img\user.png" />
     </ion-avatar>
     <ion-label>
-      <h2>{{coments.nombre}}</h2>
+      <h2>{{coments.nombrecoment}}</h2>
       <p>{{coments.comentario}}</p>
     </ion-label>
   </ion-item>
   
 
 <form id="myform" [formGroup]="formCreate" (ngSubmit)='formcoment();'>
-<p style="text-align: center;">Agrega un comentario</p>
+<p class="comenttitle">Agrega un comentario</p>
 <ion-label>Nombre</ion-label>
 <ion-input placeholder="Ingrese su nombre" formControlName="nombrecoment"></ion-input>
 <ion-label position="stacked">Comentario</ion-label>

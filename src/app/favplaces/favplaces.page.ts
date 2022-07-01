@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-favplaces',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavplacesPage implements OnInit {
 
-  constructor() { 
+  constructor(private router: Router) { 
   }
 
 
@@ -21,8 +22,11 @@ export class FavplacesPage implements OnInit {
     this.data = JSON.parse(localStorage.getItem('user'));
    console.log('Lugares favoritos del usuario',this.data)
    
-    
 
+  }
+
+  slideClick(id: number){
+    this.router.navigate(['seeplace', id ]);
   }
 
 }
