@@ -2,19 +2,24 @@
 </ion-header>
 
 <ion-content color="primary" [fullscreen]="true">
+  <div id="fb-root"></div>
+<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
 
   <header>
-    <div style="height: 35%; margin: 0px auto;">
+    <div style=" margin: 0px auto;">
       <div class="user">
         <ion-icon name="person-circle-outline" style=" height: 50px; width: 50px;" routerLink="/favplaces"></ion-icon>
       </div>
       <p class="text">Explora</p>
       <p class="lugar">Piedra del Aguila</p>
     </div>
+  </header>
+
+  <section class="buscador">
     <form>
       <ion-input placeholder="Encuentra lugares para visitar" (ionChange)="searchplace($event)"></ion-input>
     </form>
-  </header>
+  </section>
 
   <section>
     <div class="btn"> 
@@ -50,17 +55,13 @@
   </section>
 
   <section>
+      <p class="title2">Clima</p>
 
-    <div class="ultimo">
-      <p class="title2">Mas popular</p>
-      <ion-card class="imgclose"> 
-        <img src="./assets/img/place1.jpg"/>
-        <div class="texto-encima">
-          <p class="title">Rio limay</p>
-        </div>
-      </ion-card>
-    </div>
+<script type="text/javascript" src="https://www.tutiempo.net/s-widget/l_JeNwLxtBdrMBnGLKKfzDjzzDDUnK14M2LdkYkZC5akDkk1kkk"></script>      
+<iframe src="https://www.tutiempo.net/s-widget/full/43227/ca5" scrolling="no" frameborder="0" style="overflow:hidden; width:100%; height:500px;" allowTransparency="true"></iframe>
 
-  </section>
 
+</section>
+
+<script src="/src/js/data.js"></script>
 </ion-content>

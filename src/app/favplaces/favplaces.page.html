@@ -22,7 +22,7 @@ template que se muestra si no hay lugares en favoritos
           <img src="{{item.img}}"/>
           <div class="texto-encima">
             <p class="title">{{item.nombre}}</p>
-            <p class="delete">- Eliminar de favoritos</p>
+            <p class="delete" (click)="deleteplace()">- Eliminar de favoritos</p>
           </div>
         </ion-card>
       </div>

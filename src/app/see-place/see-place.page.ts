@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiplacesService } from '../services/apiplaces.service';
 import { HttpClient } from '@angular/common/http';
-import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
+import { ToastController } from '@ionic/angular';
+import { coment } from '../../environments/coments';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-see-place',
@@ -11,9 +15,9 @@ import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
 })
 export class SeePlacePage implements OnInit {
 
-  comentarios: any =[];
+
   formCreate: FormGroup;
-  comentariosactuales: any =[];
+
   
   id: any;
   todos: any = [];
@@ -25,20 +29,35 @@ export class SeePlacePage implements OnInit {
   array: any =[];
   good: number;
   bad: number;
+  maps:string;
+  comentariosAct: coment[] =[];
+  comentarios: any= [];
+  likenolike:boolean;
 
 
-  constructor(private activatedRoute: ActivatedRoute, public http: HttpClient, public service: ApiplacesService,private formbuilder: FormBuilder) {
+  constructor(
+    private activatedRoute: ActivatedRoute, 
+    public http: HttpClient, 
+    public service: ApiplacesService,
+    private formbuilder: FormBuilder,
+    public toastController: ToastController,
+    private router: Router,
+    public _location: Location
+    ) {
     
     this.formCreate = formbuilder.group({
-      "nombrecoment": new FormControl(),
-      "comentario": new FormControl(),
+      "nombrecoment": new FormControl('',[
+        Validators.required,
+      ]),
+      "comentario": new FormControl('',[
+        Validators.required,
+      ]),
       });
    }
 
   ngOnInit() {
-    localStorage.setItem("comentarios", JSON.stringify(this.comentarios));
-    this.obtenerLocalStorage();
-    
+
+    this.getComent();
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     
 
@@ -51,11 +70,13 @@ export class SeePlacePage implements OnInit {
       this.descripcion= this.todos[this.finalId].descripcion;
       this.good= this.todos[this.finalId].good;
       this.bad= this.todos[this.finalId].bad;
+      this.maps= this.todos[this.finalId].maps;
+      this.comentarios= this.todos[this.finalId].comentarios;
+
       this.data= this.todos[this.finalId];
+
       console.log("Elemento recuperado:",this.data)
     })
-
-
 
   }
 
@@ -64,35 +85,73 @@ export class SeePlacePage implements OnInit {
     console.log('Lugares favoritos del usuario',array);
     array.push(this.data);
     localStorage.setItem('user',JSON.stringify(array))
-    console.log(array);
+    this.presentToast();
   }
 
-  megusta(){
-    this.good++
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Lugar guardado en tus favoritos',
+      duration: 2000,
+      color: 'secondary',
+
+    });
+    toast.present();
   }
+
+  
+  megusta(){
+   this.good++
+  }
+  
   nomegusta(){
-    this.bad++
+      this.bad++
   }
 
   formcoment(){
-    const formData = this.formCreate.value;
-    this.comentarios.push(formData);
-    for(let i=0; i<this.comentarios.length; i++)[
-    ]
-    localStorage.setItem("comentarios", JSON.stringify(this.comentarios));
-    
+    let formData = this.formCreate.value;
+    this.comentariosAct.push(formData);
+    this.service.createComentario(formData).subscribe(data =>{
+      console.log(data);
+      this.refresh();
+
+    })
   }
 
-  obtenerLocalStorage(){
-    let userInformation = JSON.parse(localStorage.getItem("comentarios"));
-    this.comentarios= userInformation;
-    
-  }
+  getComent() {
+    this.service.getComentarios().subscribe((response) => {
+      this.comentarios = response
+ })}
 
-  
-  
-  
+ refresh(): void { window.location.reload(); }
 
+ 
+ 
+ async presentToastDelete() {
+  const toast = await this.toastController.create({
+    message: 'Comentario eliminado',
+    duration: 1000,
+    color: 'secondary',
+    position: "top" ,
+
+  });
+  toast.present();
+}
+  
+ deletecoment(id: string){
+  this.service.deleteComent(id).subscribe(
+    data => {
+    this.presentToastDelete();
+    this.service.getComentarios().subscribe(data =>{
+      console.log(data)
+      this.comentarios=data;
+    })
+    },
+    error => {
+    console.log("Error", error);
+    }
+    );
+
+}
 
 
 }

@@ -114,14 +114,14 @@ searchedPlace: any;
     this.searchedPlace = this.todos;
 
     if(this.filter="todos"){
-    if(text && text.trim() != ''){
+      
+      if( text !== ''){
       this.todos = this.todos.filter((todos: any)=>{
         return(todos.nombre.toLowerCase().indexOf(text.toLowerCase()) > 1)
       })}
 
     }
-    
-   
+  
 
   }
   

@@ -21,6 +21,8 @@
     "@angular/router": "^14.0.0",
     "@awesome-cordova-plugins/http": "^5.43.0",
     "@awesome-cordova-plugins/native-storage": "^5.43.0",
+    "@awesome-cordova-plugins/toast": "^5.44.0",
+    "@awesome-cordova-plugins/video-player": "^5.44.0",
     "@capacitor/app": "1.1.1",
     "@capacitor/haptics": "1.1.4",
     "@capacitor/keyboard": "1.2.3",
@@ -54,6 +56,8 @@
     "cordova-plugin-ionic-webview": "^5.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-video-player": "github:moust/cordova-plugin-videoplayer",
+    "cordova-plugin-x-toast": "^2.7.3",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
@@ -80,7 +84,9 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-advanced-http": {
         "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1"
-      }
+      },
+      "com.moust.cordova.videoplayer": {},
+      "cordova-plugin-x-toast": {}
     },
     "platforms": [
       "android"

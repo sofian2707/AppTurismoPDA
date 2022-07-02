@@ -127,10 +127,17 @@ font-size: 17px;
 
 .delete{
     width: fit-content;
-    color: #5EDFFF;
+    color: black;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 20px;
+    border-radius: 5px;
     font-weight: bolder;
+    height: 20px;
+    background-color: #09809eb1;
+}
+
+.delete:active{
+    background-color: black;
+    background-color: #5EDFFF;
 }
 
 

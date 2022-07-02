@@ -6,16 +6,21 @@
  /*ENCABEZADO */ 
 
 header{
-    height: 20%; 
+    height: 14%; 
     margin-top: 12%;
    
 }
+
+.buscador{
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
 
 ion-input{
 height: 55px;
 width: 330px;
 background-color: #263238;
-margin-top: 33px;
 margin-left: auto;
 margin-right: auto;
 border-radius: 12px;
@@ -143,56 +148,29 @@ border-radius: 10px;
     font-weight: 350;
     
     }
-    
-.ultimo{
-        margin-top: 5%;
+
+//pasando los 340 px cambia
+    @media (min-width: 350px) {
+        .title{
+            font-size: 13px;
+            display: flex;
+            word-wrap: break-word;
+        }
     }
 
-.imgclose{
-    
-    height: 150px;
-    border-radius: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
+    @media (max-width: 339px) {
+        header{
+            height: 20%;
+        } 
 
-/* RESPONSIVE medidas  */ 
-
-
-@media (max-width: 340px) {
-    ion-input{
-        height: 50px;
-        width: 260px;
-        font-size: 17px;
-    }
-}
-
-
-@media (max-width: 360px) {
-    header{
-        height: 23%;
-    } 
-    .title{
-        font-size: 14px;
+        .title{
+            font-size: 15px;
+            display: flex;
+        
+        }
+        ion-input{
+            width: 300px;
+        }
     }
 
-}
-
-
-@media (min-width: 360px) {
-    header{
-        height: 23%;
-    } 
-    .title{
-        font-size: 14px;
-    }
-
-}
-
-
-@media (max-width: 376px) {
-    header{
-        height: 23%;
-    } 
-}
 

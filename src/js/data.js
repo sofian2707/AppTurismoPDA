@@ -1,0 +1,1 @@
+$("input").focus(function(){  $(document.body).addClass('when-keyboard-showing');     });

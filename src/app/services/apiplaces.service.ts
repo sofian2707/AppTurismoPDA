@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { map } from 'rxjs/operators';
+import { coment } from '../../environments/coments';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +13,7 @@ export class ApiplacesService {
 
   constructor(public http: HttpClient) { }
 
-  
-
+  url:string='https://62a93e72ec36bf40bdb4b2e4.mockapi.io/coments'
   dir:string="assets/files/places.json"
 
   getTodos(){
@@ -37,8 +38,20 @@ export class ApiplacesService {
   }
 
   
-
-
+  public getComentarios(): Observable <coment[]>{
+    return this.http.get<coment[]>(this.url);
+  
+    }
     
+  public createComentario(comentario: coment):Observable <coment> {
+    return this.http.post<coment>(this.url, comentario);
+  
+    }
 
+
+    public deleteComent(id: string ) {
+      return this.http.delete(`${this.url}/${id}`);
+       }
 }
+
+
