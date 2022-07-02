@@ -35,13 +35,13 @@ AGREGAR A FAVORITOS EN LOCAL STORAGE
 
   <div class="div1">
     <div class="iconscontain">
-      <ion-icon name="thumbs-up-outline" (click)="megusta()"></ion-icon><p class="nameicon">{{good}}</p>
+      <ion-icon class="like" name="thumbs-up-sharp" (click)="megusta()"></ion-icon><p class="nameicon">{{good}}</p>
   </div>
   </div>
 
 <div class="div2"> 
     <div class="iconscontain">
-      <ion-icon name="thumbs-down-outline" id="nolike" (click)="nomegusta()"></ion-icon><p class="nameicon">{{bad}} </p>
+      <ion-icon   class="unlike" name="thumbs-down-sharp" id="nolike" (click)="nomegusta()"></ion-icon><p class="nameicon">{{bad}} </p>
     </div>
 
 </div>
@@ -68,10 +68,10 @@ AGREGAR A FAVORITOS EN LOCAL STORAGE
 <form id="myform" [formGroup]="formCreate" (ngSubmit)='formcoment();'>
 <p class="comenttitle">Deja tu comentario</p>
 <ion-label>Nombre</ion-label>
-<ion-input placeholder="Ingrese su nombre" formControlName="nombrecoment"></ion-input>
+<ion-input placeholder="Ingrese su nombre" formControlName="nombrecoment" id="nombrecoment" name="nombrecoment"></ion-input>
 <ion-label position="stacked">Comentario</ion-label>
-<ion-textarea placeholder="Escribe el comentario" formControlName="comentario"></ion-textarea>
-<ion-button type="submit" color="secondary" style="display: block;">Enviar comentario</ion-button>
+<ion-textarea placeholder="Escribe el comentario" formControlName="comentario" id="comentario" name="comentario"></ion-textarea>
+<ion-button type="submit" color="secondary" style="display: block;" [disabled]="!formCreate.valid">Enviar comentario</ion-button>
 
 
   

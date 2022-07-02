@@ -47,10 +47,10 @@ export class SeePlacePage implements OnInit {
     
     this.formCreate = formbuilder.group({
       "nombrecoment": new FormControl('',[
-        Validators.required,
+        Validators.required
       ]),
       "comentario": new FormControl('',[
-        Validators.required,
+        Validators.required
       ]),
       });
    }
@@ -100,11 +100,15 @@ export class SeePlacePage implements OnInit {
 
   
   megusta(){
-   this.good++
+  this.good++;
+   
+    
   }
   
   nomegusta(){
-      this.bad++
+  
+  this.bad++;
+
   }
 
   formcoment(){

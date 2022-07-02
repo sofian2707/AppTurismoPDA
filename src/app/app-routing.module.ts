@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./see-place/see-place.module').then( m => m.SeePlacePageModule)
   },
   {
-    path: 'maps',
-    loadChildren: () => import('./maps/maps.module').then( m => m.MapsPageModule)
-  },
-  {
     path: 'favplaces',
     loadChildren: () => import('./favplaces/favplaces.module').then( m => m.FavplacesPageModule)
   }

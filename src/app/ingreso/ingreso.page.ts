@@ -113,15 +113,33 @@ searchedPlace: any;
     const text = event.target.value;
     this.searchedPlace = this.todos;
 
-    if(this.filter="todos"){
-      
-      if( text !== ''){
+  
+    if(text && text.trim() != ''){
       this.todos = this.todos.filter((todos: any)=>{
         return(todos.nombre.toLowerCase().indexOf(text.toLowerCase()) > 1)
-      })}
+      })}else{
+        if(this.filter=='todos'){
+          this.verTodo();
+        }
+        else if(this.filter=='lagos'){
+          this.verLagos();
+        }else if(this.filter=='rios'){
+          this.verRios();
+        } else if(this.filter=='bares'){
+          this.verBares();
+        } else if(this.filter=='hoteles'){
+          this.verHoteles();
+        } else if(this.filter=='camping'){
+          this.verCamping();
+        } else if(this.filter=='restaurant'){
+          this.verRestaurant();
+        } else if(this.filter=='miradores'){
+          this.verMiradores();
+        }
+      }
 
-    }
-  
+    
+
 
   }
   

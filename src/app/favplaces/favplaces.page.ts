@@ -19,20 +19,15 @@ export class FavplacesPage implements OnInit {
   
 
   ngOnInit() {
-  this.active= false;
-  this.data = JSON.parse(localStorage.getItem('user'));
-  console.log('Lugares favoritos del usuario',this.data)
-  console.log(localStorage.getItem('user').length) 
-
+ this.mostrardata();
 
 
   }
 
-  mostrartemplate(){
-    this.active= true;
-
+  mostrardata(){
+    this.data = JSON.parse(localStorage.getItem('user'));
+    console.log('Lugares favoritos del usuario',this.data)
   }
-
 
 
   slideClick(id: number){
@@ -40,9 +35,16 @@ export class FavplacesPage implements OnInit {
   }
 
 
-  deleteplace(){
+
+  deleteplace(id:string){
+    this.data = JSON.parse(localStorage.getItem('user'));
+    console.log('eliminado')
+    let users=this.data.filter((x: { id: string; })=>x.id!=id);
+    localStorage.setItem('user',JSON.stringify(users))
     this.presentToast();
   }
+
+
 
   async presentToast() {
     const toast = await this.toastController.create({
@@ -53,5 +55,6 @@ export class FavplacesPage implements OnInit {
     });
     toast.present();
   }
+
 
 }
